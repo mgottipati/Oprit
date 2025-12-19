@@ -1,0 +1,143 @@
+.home-hero {
+  width: 100vw; 
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 80vh; 
+
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-button {
+  margin-top: 2rem;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: white;
+  color: #b21f1f;
+}
+
+.features-section {
+  /* This breaks the section out to the full width of the browser */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #242424;
+}
+
+.spotlight-section {
+  padding: 4rem 2rem;
+  background-color: #2a2a2a; 
+  color: #f0f0f0;
+}
+
+.spotlight-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spotlight-text {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.spotlight-text h2 {
+  font-size: 2.5rem;
+}
+
+.spotlight-image {
+  flex: 1;
+}
+
+.spotlight-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+.feature-link:hover,
+.feature-link:active,
+.feature-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.feature-link:hover .feature-card {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
