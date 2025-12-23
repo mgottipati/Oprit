@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/Oprit/', 
   plugins: [react()],
+  build: {
+    outDir: 'docs', // This tells Vite to use /docs instead of /dist
+  }
 })

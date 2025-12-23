@@ -3,8 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mgottipati.github.io/Oprit/",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
