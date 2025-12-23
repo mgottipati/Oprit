@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap'; // Add this import
+import { Carousel } from 'react-bootstrap';
 import './Home.css';
+import cleanup from '../assets/cleanup.jpg';
 
 export default function Home() {
   const [userName, setUserName] = useState('');
@@ -19,9 +20,15 @@ export default function Home() {
       <div className="content-area">
         <div className="info-box">
           <h2 className="nav-style-font">LEADERBOARD</h2>
+          <p>
+            coming soon!
+          </p>
         </div>
         <div className="info-box">
           <h2 className="nav-style-font">TOP PRIZES</h2>
+          <p>
+            coming soon!
+          </p>
         </div>
       </div>
 
@@ -43,15 +50,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- NEW OUR IMPACT SECTION --- */}
       <section className="impact-section">
         <div className="impact-container">
           <h2 className="nav-style-font impact-title">OUR IMPACT</h2>
           <Carousel className="impact-carousel">
             <Carousel.Item>
               <div className="carousel-placeholder">
-                <p>Volunteer Image 1 Placeholder</p>
-                {/* Once you have images, use: <img src={yourImage1} alt="First slide" /> */}
+                <img src={cleanup} alt="First slide" />
               </div>
               <Carousel.Caption>
                 <h3>Community Cleanup</h3>
@@ -65,7 +70,16 @@ export default function Home() {
               </div>
               <Carousel.Caption>
                 <h3>Tree Planting</h3>
-                <p>Helping restore the local canopy.</p>
+                <p>Desc..</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="carousel-placeholder">
+                <p>Volunteer Image 3 Placeholder</p>
+              </div>
+              <Carousel.Caption>
+                <h3>Tree Planting</h3>
+                <p>Another volunteering work pic</p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

@@ -5,6 +5,7 @@ import FindOpportunities from './components/FindOpportunities';
 import MyProfile from './components/MyProfile';
 import Submissions from './components/Submissions';
 import Coupons from './components/Coupons';
+import Shop from './components/Shop';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/myProfile" element={<MyProfile />} />
         <Route path="/submissions" element={<Submissions />} />
         <Route path="/coupons" element={<Coupons />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
     </HashRouter>
   );

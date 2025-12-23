@@ -101,6 +101,48 @@
   transition: transform 0.2s ease;
 }
 
-.submission-row:hover {
-  transform: scale(1.01); /* Subtle lift when hovering */
+.data-row:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Optional: adds a bit more depth only to data rows */
+}
+
+.points-summary-card {
+    background-color: #d9ebd3;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 3px solid #2d4c1e;
+}
+
+.big-points {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #2d4c1e;
+}
+
+.pts-val {
+    font-weight: 800;
+    color: #2e7d32;
+}
+
+.points-display {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 2px solid #2d4c1e;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.points-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #666;
+}
+
+.points-value {
+    font-size: 1.2rem;
+    font-weight: 900;
 }

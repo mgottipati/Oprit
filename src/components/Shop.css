@@ -1,0 +1,34 @@
+.shop-page-bg {
+  background-color: #2d4c1e !important;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.shop-page-bg .container {
+  background-color: transparent !important;
+}
+
+.shop-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.shop-card:hover {
+  transform: translateY(-10px);
+}
+
+.shop-card .btn-success {
+  background-color: #2d4c1e;
+  border: none;
+}
+
+.shop-card .btn-success:hover {
+  background-color: #a3cb38;
+  color: #1b4332;
+}
