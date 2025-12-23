@@ -1,0 +1,106 @@
+.submissions-page-bg {
+  background-color: #2d4c1e; 
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.submissions-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.submissions-title-box {
+  background-color: #d9ebd3;
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.submissions-title-box h1 {
+  margin: 0;
+  color: #2e7d32;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.submission-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.submission-row > div {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.header-row {
+  background-color: #b9d6a3;
+  color: #2e7d32;
+  font-weight: 800;
+}
+
+.data-row {
+  background-color: #d9ebd3;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-style-font {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ... keep your existing CSS and add these classes ... */
+
+.status-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+/* Success / Approved Style */
+.status-col.success {
+  color: #2e7d32; /* Dark green */
+}
+
+/* Pending Style */
+.status-col.pending {
+  color: #fbc02d; /* Yellow/Gold */
+}
+
+/* Error / Denied Style */
+.status-col.error {
+  color: #d32f2f; /* Red */
+}
+
+/* Making the row corners even more rounded for the "pill" look */
+.submission-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+  margin-bottom: 20px; /* Increased gap */
+  border-radius: 20px; /* Much rounder edges */
+  background-color: #d9ebd3;
+  transition: transform 0.2s ease;
+}
+
+.submission-row:hover {
+  transform: scale(1.01); /* Subtle lift when hovering */
+}

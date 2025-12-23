@@ -1,0 +1,135 @@
+.opportunities-page-bg {
+  background-color: #d9ebd3; /* Light green outer background */
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.opportunities-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.opp-title-box {
+  background-color: #2d4c1e;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.opp-title-box h1 {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+/* Search Box Area */
+.search-section {
+  background-color: #2d4c1e;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.form-row label {
+  color: white;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.form-row input, .form-row select {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: none;
+  border: none;
+  color: white;
+  display: block;      /* Allows centering */
+  margin: 0 auto;      /* Centers it horizontally */
+  font-weight: 800;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Results/Map Section */
+.results-section {
+  text-align: center;
+  border: 1px solid #2d4c1e;
+  padding: 20px;
+}
+
+.results-header {
+  background-color: #2d4c1e;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.results-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.map-placeholder {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.loading {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #2d4c1e;
+  font-weight: bold;
+}
+
+.map-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2d4c1e;
+  font-weight: 800;
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+.map-container {
+  border: 5px solid #2d4c1e;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  width: 100%;
+  height: 500px; /* Fixed height for the map */
+}
+
+/* Ensure the iframe inside fills the container */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
