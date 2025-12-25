@@ -2,6 +2,36 @@
   width: 100%;
 }
 
+/* Contact Footer Styling - matches Home.jsx inline style */
+.contact-footer {
+  width: 100vw;
+  padding: 1.5em 0;
+  background: #e5ffef;
+  text-align: center;
+  font-size: 1.01rem;
+  color: #247a40;
+  margin-top: 2.5em;
+  letter-spacing: 0.4px;
+  border-top: 1.5px solid #baf0d6;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  opacity: 1;
+  box-shadow: 0 -2px 20px #d0fbe3aa;
+}
+
+.contact-footer strong {
+  color: #217f43;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+}
+
+.contact-footer span {
+  font-size: 1.02em;
+  font-family: inherit;
+  color: #2e7d32;
+}
+
+
 .hero-banner {
   width: 100%;
   height: 300px;

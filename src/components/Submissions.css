@@ -62,8 +62,6 @@
   text-transform: uppercase;
 }
 
-/* ... keep your existing CSS and add these classes ... */
-
 .status-col {
   display: flex;
   align-items: center;
@@ -75,35 +73,30 @@
   font-size: 1.2rem;
 }
 
-/* Success / Approved Style */
 .status-col.success {
-  color: #2e7d32; /* Dark green */
+  color: #2e7d32;
 }
 
-/* Pending Style */
 .status-col.pending {
-  color: #fbc02d; /* Yellow/Gold */
+  color: #fbc02d;
 }
 
-/* Error / Denied Style */
 .status-col.error {
-  color: #d32f2f; /* Red */
+  color: #d32f2f;
 }
-
-/* Making the row corners even more rounded for the "pill" look */
 .submission-row {
   display: flex;
   justify-content: space-between;
   padding: 22px;
-  margin-bottom: 20px; /* Increased gap */
-  border-radius: 20px; /* Much rounder edges */
+  margin-bottom: 20px; 
+  border-radius: 20px; 
   background-color: #d9ebd3;
   transition: transform 0.2s ease;
 }
 
 .data-row:hover {
   transform: scale(1.01);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Optional: adds a bit more depth only to data rows */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .points-summary-card {
@@ -145,4 +138,30 @@
 .points-value {
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+.section-title {
+  color: #d9f4e8;
+  margin: 40px 0 15px 0;
+  font-size: 1.4rem;
+  border-left: 5px solid #43b747;
+  padding-left: 15px;
+}
+
+.redemptions-header {
+  background-color: #f1f8f1 !important;
+}
+
+.code-text {
+  font-family: monospace;
+  background: #e3f5e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #238c4a;
+}
+
+.pts-spent {
+  color: #c0392b;
+  font-weight: bold;
 }

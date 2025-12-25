@@ -1,0 +1,128 @@
+.coupon-page-bg {
+  background-color: #cddfc6 !important;
+  min-height: 100vh;
+}
+
+.points-status {
+  background: white;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 2px solid #238c4a;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.coupon-card {
+  background: white;
+  display: flex;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  min-height: 160px;
+  border: 1px solid #ceedcb;
+  transition: transform 0.2s;
+}
+
+.coupon-card:hover {
+  transform: scale(1.03);
+}
+
+.coupon-left {
+  flex: 2;
+  padding: 20px;
+  border-right: 2px dashed #ceedcb;
+}
+
+.coupon-right {
+  flex: 1;
+  background: #f7fff8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.offer-text {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.price-tag {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #238c4a;
+  line-height: 1;
+}
+
+.pts-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.redeem-btn {
+  font-size: 0.8rem;
+  font-weight: 800;
+  width: 100%;
+}
+
+.punch-hole {
+  width: 20px;
+  height: 20px;
+  background-color: #d8ffdd;
+  position: absolute;
+  left: 66.6%;
+  margin-left: -10px;
+  border-radius: 50%;
+}
+
+.punch-hole.top { top: -10px; }
+.punch-hole.bottom { bottom: -10px; }
+
+.coupon-card.sold-out {
+  opacity: 0.6;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.sold-out::after {
+  content: "SOLD OUT";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(255, 0, 0, 0.6);
+  border: 4px solid rgba(255, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.coupon-card.locked {
+  background-color: #f0f0f0;
+  border-color: #d1d1d1;
+  cursor: not-allowed;
+}
+
+.coupon-card.locked .coupon-left h4,
+.coupon-card.locked .offer-text {
+  color: #888 !important; 
+}
+
+.coupon-card.locked .price-tag {
+  color: #b52b2b;
+}
+
+.coupon-card.locked::before {
+  content: "🔒";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}

@@ -85,6 +85,25 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
+
+      {/* Contact Information Footer Section */}
+      <footer className="contact-footer" style={{
+        width: "100vw",
+        padding: "1.5em 0",
+        background: "#e5ffef",
+        textAlign: "center",
+        fontSize: "1.01rem",
+        color: "#247a40",
+        marginTop: "2.5em",
+        letterSpacing: "0.4px",
+        borderTop: "1.5px solid #baf0d6"
+      }}>
+        <div>
+          <strong>Contact us: </strong>
+          {/* Fill out with actual contact information */}
+          <span>[email protected] &nbsp;|&nbsp; (123) 456-7890 &nbsp;|&nbsp; Address or other info</span>
+        </div>
+      </footer>
     </div>
   );
 }
