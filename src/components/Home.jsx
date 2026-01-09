@@ -36,16 +36,12 @@ export default function Home() {
         <div className="about-content">
           <div className="mission-box">
             <h2 className="nav-style-font">Our Mission</h2>
-            <p>Oprit aims to connect volunteers with local environmental opportunities to create a greener future.
-              Oprit aims to connect volunteers with local environmental opportunities to create a greener future
-              Oprit aims to connect volunteers with local environmental opportunities to create a greener future
-              Oprit aims to connect volunteers with local environmental opportunities to create a greener future
-              Oprit aims to connect volunteers with local environmental opportunities to create a greener future
+            <p>Oprit is committed to creating a greener planet by incentivizing volunteers to clean up their local environments. At Oprit, we understand that clean up efforts not only benefit the earth, but foster a sense of deeper connection with one's community. By partnering with local businesses, Oprit strives to create a welcoming and encouraging environment for all those involved. 
             </p>
           </div>
           <div className="bio-box">
-            <h2 className="nav-style-font">About Us</h2>
-            <p>We are dedicated to making community service accessible and rewarding for everyone.</p>
+            <h2 className="nav-style-font">Positioning Statement</h2>
+            <p>For those passionate about protecting the environment, Oprit is a platform that provides unlimited opportunities for clean up efforts through volunteering and the exchange of goods. </p>
           </div>
         </div>
       </section>

@@ -13,8 +13,8 @@ export default function NavigationBar() {
             <Nav.Link as={Link} to="/findOpportunities" className="fw-bold text-success">FIND OPPORTUNITIES</Nav.Link>
             <Nav.Link as={Link} to="/submissions" className="fw-bold text-success">SUBMISSIONS</Nav.Link>
             <Nav.Link as={Link} to="/coupons" className="fw-bold text-success">COUPONS</Nav.Link>
-            <Nav.Link as={Link} to="/myProfile" className="fw-bold text-success">MY PROFILE</Nav.Link>
             <Nav.Link as={Link} to="/shop">SHOP</Nav.Link>
+            <Nav.Link as={Link} to="/myProfile" className="fw-bold text-success">MY PROFILE</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Brand as={Link} to="/" className="ms-4 p-0">

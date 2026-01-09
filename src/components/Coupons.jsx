@@ -1,31 +1,27 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Badge, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Coupons.css';
 
 export default function Coupons() {
-  const [userProfile, setUserProfile] = useState({ name: '', points: 0 });
+  const [userProfile, setUserProfile] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [selectedCoupon, setSelectedCoupon] = useState(null);
 
+  useEffect(() => {
+    const savedData = localStorage.getItem('userProfile');
+    
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      setUserProfile({
+        name: parsedData.name || 'User',
+        points: parsedData.points || 0
+      });
+    }
+    setLoading(false);
+  }, []);
 
-
-useEffect(() => {
-  const savedData = localStorage.getItem('userProfile');
-  
-  if (savedData) {
-    const parsedData = JSON.parse(savedData);
-    setUserProfile({
-      name: parsedData.name || 'User',
-      points: parsedData.points || 0
-    });
-  } else {
-    const newProfile = { name: 'User', points: 0 };
-    setUserProfile(newProfile);
-    localStorage.setItem('userProfile', JSON.stringify(newProfile));
-  }
-}, []);
-
-  // Fake coupon data
   const [fakeCoupons, setFakeCoupons] = useState([
     { id: 1, shop: "Green Bean Cafe", offer: "Free Oat Milk Latte", cost: 100, category: "Food", qty: 5 },
     { id: 2, shop: "Urban Roots", offer: "20% Off Native Plants", cost: 250, category: "Retail", qty: 2 },
@@ -34,37 +30,55 @@ useEffect(() => {
   ]);
 
   const handleRedeemClick = (coupon) => {
-    if (userProfile.points >= coupon.cost && coupon.qty > 0) {
+    if (userProfile && userProfile.points >= coupon.cost && coupon.qty > 0) {
       setSelectedCoupon(coupon);
       setShowModal(true);
     }
   };
 
-const confirmRedemption = () => {
-  const newPoints = userProfile.points - selectedCoupon.cost;
-  const claimCode = "OPRIT-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+  const confirmRedemption = () => {
+    const newPoints = userProfile.points - selectedCoupon.cost;
+    const claimCode = "OPRIT-" + Math.random().toString(36).substring(2, 8).toUpperCase();
 
-  const updatedProfile = { ...userProfile, points: newPoints };
-  setUserProfile(updatedProfile);
-  localStorage.setItem('userProfile', JSON.stringify(updatedProfile));
+    const updatedProfile = { ...userProfile, points: newPoints };
+    setUserProfile(updatedProfile);
+    localStorage.setItem('userProfile', JSON.stringify(updatedProfile));
 
-  const history = JSON.parse(localStorage.getItem('redemptionHistory')) || [];
-  const newEntry = {
-    offer: selectedCoupon.offer,
-    shop: selectedCoupon.shop,
-    cost: selectedCoupon.cost,
-    code: claimCode,
-    date: new Date().toLocaleDateString()
+    const history = JSON.parse(localStorage.getItem('redemptionHistory')) || [];
+    const newEntry = {
+      offer: selectedCoupon.offer,
+      shop: selectedCoupon.shop,
+      cost: selectedCoupon.cost,
+      code: claimCode,
+      date: new Date().toLocaleDateString()
+    };
+    localStorage.setItem('redemptionHistory', JSON.stringify([newEntry, ...history]));
+
+    setFakeCoupons(prev => prev.map(c => 
+      c.id === selectedCoupon.id ? { ...c, qty: c.qty - 1 } : c
+    ));
+
+    setShowModal(false);
+    alert(`Success! Code: ${claimCode}`);
   };
-  localStorage.setItem('redemptionHistory', JSON.stringify([newEntry, ...history]));
 
-  setFakeCoupons(prev => prev.map(c => 
-    c.id === selectedCoupon.id ? { ...c, qty: c.qty - 1 } : c
-  ));
+  if (loading) return <div className="coupon-page-bg"></div>;
 
-  setShowModal(false);
-  alert(`Success! Code: ${claimCode}`);
-};
+  if (!userProfile) {
+    return (
+      <div className="coupon-page-bg locked-view">
+        <Container className="text-center py-5">
+          <div className="lock-card">
+            <h1 className="nav-style-font text-dark">🔒 REWARDS LOCKED</h1>
+            <p className="mb-4 text-muted">You need an Oprit account to earn points and redeem local rewards!</p>
+            <Button as={Link} to="/profile" variant="success" className="auth-btn">
+              SIGN IN TO CHECK
+            </Button>
+          </div>
+        </Container>
+      </div>
+    );
+  }
 
   return (
     <div className="coupon-page-bg">
@@ -114,7 +128,6 @@ const confirmRedemption = () => {
           })}
         </Row>
 
-        {/* --- Redemption Confirmation Modal --- */}
         <Modal show={showModal} onHide={() => setShowModal(false)} centered>
           <Modal.Header closeButton>
             <Modal.Title className="nav-style-font">Confirm Redemption</Modal.Title>

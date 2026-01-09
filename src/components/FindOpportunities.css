@@ -1,5 +1,5 @@
 .opportunities-page-bg {
-  background-color: #d9ebd3; /* Light green outer background */
+  background-color: #d9ebd3;
   width: 100%;
   min-height: 100vh;
   padding: 40px 20px;
@@ -27,7 +27,6 @@
   font-size: 2.5rem;
 }
 
-/* Search Box Area */
 .search-section {
   background-color: #2d4c1e;
   padding: 40px;
@@ -61,8 +60,8 @@
   background: none;
   border: none;
   color: white;
-  display: block;      /* Allows centering */
-  margin: 0 auto;      /* Centers it horizontally */
+  display: block;
+  margin: 0 auto;
   font-weight: 800;
   font-size: 1.5rem;
   cursor: pointer;
